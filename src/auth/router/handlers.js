@@ -44,9 +44,29 @@ function handleSecret(req, res, next) {
   res.status(200).send(`Welcome to the secret area!`);
 }
 
+function handleRead(req, res, next) {
+  res.status(200).send('You have read permission');
+}
+
+function handleCreate(req, res, next) {
+  res.status(200).send('You have create permission');
+}
+
+function handleUpdate(req, res, next) {
+  res.status(200).send('You have update permission');
+}
+
+function handleDelete(req, res, next) {
+  res.status(200).send('You have delete permission');
+}
+
 module.exports = {
   handleSignup,
   handleSignin,
   handleGetUsers,
   handleSecret,
+  handleRead,
+  handleCreate,
+  handleUpdate,
+  handleDelete,
 };
